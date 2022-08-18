@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tables Cheatsheet</title>
+        <link href="styles.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Rubik:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="header">
+            <h1>Tables</h1>
+        </div>
+        <ul class="no-bullets">
+            <li>
+                <h3>Topics</h3>
+            </li>
+            <li>
+                <a href="#tr">Table Row Element</a>
+            </li>
+            <li>
+                <a href="#td">Table Data Element</a>
+            </li>
+            <li>
+                <a href="#thead">Table Head Element</a>
+            </li>
+            <li>
+                <a href="#rowspan">rowspan Attribute</a>
+            </li>
+            <li>
+                <a href="#tbody">Table Body Element</a>
+            </li>
+            <li>
+                <a href="#th">Table Heading Element</a>
+            </li>
+            <li>
+                <a href="#colspan">colspan Element</a>
+            </li>
+            <li>
+                <a href="#tfoot">Table Footer Element</a>
+            </li>
+            <li>
+                <a href="#table">Table Element</a>
+            </li>
+        </ul>
+
+        <div class="main-content">
+
+            <h2 id="tr">&lt;tr&gt; Table Row Element</h2>
+            <div class="parent">
+                <div class="blurb">The table row element, <span class="inline-code">&lt;tr&gt;</span>, is used to add rows to a table before adding table data and table headings.</div>
+                <pre>
+&lt;<span class="element">table</span>&gt;
+    &lt;<span class="element">tr</span>&gt;
+        ...
+    &lt;/<span class="element">tr</span>&gt;
+&lt;/<span class="element">table</span>&gt;</pre>
+            </div>
+
+            <h2 id="td">&lt;td&gt; Table Data Element</h2>
+            <div class="parent">
+                <div class="blurb">The table data element, <span class="inline-code">&lt;td&gt;</span>, can be nested ienside a table row element, <span class="inline-code">&lt;tr&gt;</span>, to add a cell of data to a table.</div>
+                <pre>
+&lt;<span class="element">table</span>&gt;
+    &lt;<span class="element">tr</span>&gt;
+        &lt;<span class="element">td</span>&gt;cell one data&lt;/<span class="element">td</span>&gt;
+        &lt;<span class="element">td</span>&gt;cell two data&lt;/<span class="element">td</span>&gt;
+    &lt;/<span class="element">tr</span>&gt;
+&lt;/<span class="element">table</span>&gt;</pre>
+            </div>
+            
+            <h2 id="thead">&lt;thead&gt; Table Head Element</h2>
+            <div class="parent">
+                <div class="blurb">The table head element, <span class="inline-code">&lt;thead&gt;</span>, defines the headings of table columns encapsulated in table rows.</div>
+                <pre>
+&lt;<span class="element">table</span>&gt;
+    &lt;<span class="element">thead</span>&gt;
+        &lt;<span class="element">tr</span>&gt;
+            &lt;<span class="element">th</span>&gt;heading 1&lt;/<span class="element">th</span>&gt;
+            &lt;<span class="element">th</span>&gt;heading 2&lt;/<span class="element">th</span>&gt;
+        &lt;/<span class="element">tr</span>&gt;
+    &lt;/<span class="element">thead</span>&gt;
+    &lt;<span class="element">tbody</span>&gt;
+        &lt;<span class="element">tr</span>&gt;
+            &lt;<span class="element">td</span>&gt;col 1&lt;/<span class="element">td</span>&gt;
+            &lt;<span class="element">td</span>&gt;col 2&lt;/<span class="element">td</span>&gt;
+        &lt;/<span class="element">tr</span>&gt;
+    &lt;/<span class="element">tbody</span>&gt;
+&lt;/<span class="element">table</span>&gt;</pre>
+        </pre>
+            </div>
+
+            <h2 id="rowspan">rowspan Attribute</h2>
+            <div class="parent">
+                <div class="blurb">Similar to <span class="inline-code">colspan</span>, the <span class="inline-code">rowspan</span> attribute on a table or header or table data element indicates how many rows that particular cell should span within the table. The <span class="inline-code">rowspan</span> value is set to 1 by default and will take any positive integer up to 65534.</div>
+                <pre>
+&lt;<span class="element">table</span>&gt;
+    &lt;<span class="element">tr</span>&gt;
+        &lt;<span class="element">th</span>&gt;row 1:&lt;/<span class="element">th</span>&gt;
+        &lt;<span class="element">td</span>&gt;col 1:&lt;/<span class="element">td</span>&gt;
+        &lt;<span class="element">td</span>&gt;col 2:&lt;/<span class="element">td</span>&gt;
+    &lt;/<span class="element">tr</span>&gt;
+    &lt;<span class="element">tr</span>&gt;
+        &lt;<span class="element">th</span> <span class="green-element">rowspan</span>="<span class="green-element">2</span>"</span>&gt;row 2 (this row will span 2 rows):&lt;/<span class="element">th</span>&gt;
+        &lt;<span class="element">td</span>&gt;col 1:&lt;/<span class="element">td</span>&gt;
+        &lt;<span class="element">td</span>&gt;col 2:&lt;/<span class="element">td</span>&gt;
+    &lt;/<span class="element">tr</span>&gt;
+    &lt;<span class="element">tr</span>&gt;
+        &lt;<span class="element">td</span>&gt;col 1&lt;/<span class="element">td</span>&gt;
+        &lt;<span class="element">td</span>&gt;col 2:&lt;/<span class="element">td</span>&gt;
+    &lt;/<span class="element">tr</span>&gt;
+    &lt;<span class="element">tr</span>&gt;
+        &lt;<span class="element">th</span>&gt;row 3:&lt;/<span class="element">th</span>&gt;
+        &lt;<span class="element">td</span>&gt;col 1:&lt;/<span class="element">td</span>&gt;
+        &lt;<span class="element">td</span>&gt;col 2:&lt;/<span class="element">td</span>&gt;
+    &lt;/<span class="element">tr</span>&gt;
+&lt;/<span class="element">table</span>&gt;
+                </pre>
+
+            <h2 id="tbody">&lt;tbody&gt; Table Body Element</h2>
+            <div class="parent">
+                <div class="blurb">The table body element, <span class="inline-code">&lt;tbody&gt;</span>, is a semantic element that will contain all table data other than table heading and table footer content. If used, <span class="inline-code">&lt;tbody&gt;</span> will contain all table row <span class"inline-code">&lt;tr&gt;</span> elements, and indicates that <span class="inline-code">&lt;tr&gt;</span> elements make up the body of the table. <span class="inline-code">&lt;table&gt;</span> cannot have both <span class="inline-code">&lt;tbody&gt;</span> and <span class="inline-code">&lt;tr&gt;</span> as direct children.</div>
+                <pre>
+&lt;<span class="element">table</span>&gt;
+    &lt;<span class="element">tbody</span>&gt;
+        &lt;<span class="element">tr</span>&gt;
+            &lt;<span class="element">td</span>&gt;row 1&lt;/<span class="element">td</span>&gt;
+        &lt;/<span class="element">tr</span>&gt;
+        &lt;<span class="element">tr</span>&gt;
+            &lt;<span class="element">td</span>&gt;row 2&lt;/<span class="element">td</span>&gt;
+        &lt;/<span class="element">tr</span>&gt;
+        &lt;<span class="element">tr</span>&gt;
+            &lt;<span class="element">td</span>&gt;row 3&lt;/<span class="element">td</span>&gt;
+        &lt;/<span class="element">tr</span>&gt;
+    &lt;<span class="element">tbody</span>&gt;
+&lt;/<span class="element">table</span>&gt;
+                                </pre>
+
+            <h2 id="th">&lt;thead&gt; Table Heading Element</h2>
+            <div class="parent">
+                <div class="blurb">The table heading element, <span class="inline-code">&lt;th&gt;</span>, is used to add titles to rows and columns of a table and must be enclosed in a table row element, <span class="inline-code">&lt;tr&gt;</span>.</div>
+                <pre>
+&lt;<span class="element">table</span>&gt;
+    &lt;<span class="element">tr</span>&gt;
+        &lt;<span class="element">th</span>&gt;column one&lt;/<span class="element">th</span>&gt;
+        &lt;<span class="element">th</span>&gt;column two&lt;/<span class="element">th</span>&gt;
+    &lt;/<span class="element">tr</span>&gt;
+    &lt;<span class="element">tr</span>&gt;
+        &lt;<span class="element">td</span>&gt;1&lt;/<span class="element">td</span>&gt;
+        &lt;<span class="element">td</span>&gt;2&lt;/<span class="element">td</span>&gt;
+    &lt;/<span class="element">tr</span>&gt;
+&lt;/<span class="element">table</span>&gt;</pre>
+                                </pre>
+            </div>
+
+            <h2 id="colspan">colspan Attribute</h2>
+            <div class="parent">
+                <div class="blurb">The <span class="inline-code">colspan</span> attribute on a table header <span class="inline-code">&lt;th&gt;</span> or table data <span class="inline-code">&lt;td&gt;</span> element indicates how manay columns that particular cell should span within the table. The <span class="inline-code">colspan</span> value is set to 1 by default and will take any positive integer between 1 and 1000.</div>
+                <pre>
+&lt;<span class="element">table</span>&gt;
+    &lt;<span class="element">tr</span>&gt;
+        &lt;<span class="element">th</span>&gt;row 1:&lt;/<span class="element">th</span>&gt;
+        &lt;<span class="element">td</span>&gt;col 1:&lt;/<span class="element">td</span>&gt;
+        &lt;<span class="element">td</span>&gt;col 2:&lt;/<span class="element">td</span>&gt;
+        &lt;<span class="element">td</span>&gt;col 3:&lt;/<span class="element">td</span>&gt;
+    &lt;/<span class="element">tr</span>&gt;
+    &lt;<span class="element">tr</span>&gt;
+        &lt;<span class="element">th</span>row 2:<span class="element">th</span>&gt;
+        &lt;<span class="element">td</span> <span class="green-element">colspan</span>="<span class="green-element">2</span>"</span>&gt;col 1 (will span 2 columns):&lt;/<span class="element">th</span>&gt;
+        &lt;<span class="element">td</span>&gt;col 2:&lt;/<span class="element">td</span>&gt;
+        &lt;<span class="element">td</span>&gt;col 3:&lt;/<span class="element">td</span>&gt;
+    &lt;/<span class="element">tr</span>&gt;
+&lt;/<span class="element">table</span>&gt;
+                                </pre>
+            </div>
+
+
+
+
+
+            <h2 id="tfoot">&lt;tfoot&gt; Table Footer Element</h2>
+            <div class="parent">
+                <div class="blurb">The table footer element, <span class="inline-code">&lt;tfoot&gt;</span>, uses table rows to give footer content or to summarize content at the end of a table.</div>
+                <pre>
+&lt;<span class="element">table</span>&gt;
+    &lt;<span class="element">thead</span>&gt;
+        &lt;<span class="element">tr</span>&gt;
+            &lt;<span class="element">th</span>&gt;heading 1&lt;/<span class="element">th</span>&gt;
+            &lt;<span class="element">th</span>&gt;heading 2&lt;/<span class="element">th</span>&gt;
+        &lt;/<span class="element">tr</span>&gt;
+    &lt;/<span class="element">thead</span>&gt;
+    &lt;<span class="element">tbody</span>&gt;
+        &lt;<span class="element">tr</span>&gt;
+            &lt;<span class="element">td</span>&gt;col 1&lt;/<span class="element">td</span>&gt;
+            &lt;<span class="element">td</span>&gt;col 2&lt;/<span class="element">td</span>&gt;
+        &lt;/<span class="element">tr</span>&gt;
+    &lt;/<span class="element">tbody</span>&gt;
+    &lt;<span class="element">tfoot</span>&gt;
+        &lt;<span class="element">tr</span>&gt;
+            &lt;<span class="element">td</span>&gt;summary of col 1&lt;/<span class="element">td</span>&gt;
+            &lt;<span class="element">td</span>&gt;summary of col 2&lt;/<span class="element">td</span>&gt;
+        &lt;/<span class="element">tr</span>&gt;
+    &lt;/<span class="element">tfoot</span>&gt;
+&lt;/<span class="element">table</span>&gt;</pre>
+                                </pre>
+
+            <h2 id="table">&lt;table&gt; Table Element</h2>
+            <div class="parent">
+                <div class="blurb">In HTML, the <span class="inline-code">&lt;table&gt;</span>, element has content that is used to represent a two-dimensional table made of rows and columns.</div>
+                <pre>
+&lt;<span class="element">table</span>&gt;
+    <span class="commented-code">&lt;!-- rows and columns will go here --&gt;</span>
+&lt;/<span class="element">table</span>&gt;</pre>    
+            </div>
+        </div>
+    </body>
+</html>

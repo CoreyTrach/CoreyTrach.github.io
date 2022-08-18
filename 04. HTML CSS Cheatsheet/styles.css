@@ -1,0 +1,134 @@
+* {
+    font-family: Rubik;
+}
+
+.header h1 {
+    font-size: 70px;
+    width: 100%;
+    background-color: rgb(0, 0, 43);
+    color: white;
+    padding: 70px 0px 70px 290px;
+    text-align:left;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.no-bullets {
+    list-style-type: none;
+    border-style: solid;
+    border-width: 3px;
+    display: inline-block;
+    padding: 0px 20px 10px 20px;
+    position: fixed;
+    top: 180px;
+    left: 40px;
+    line-height: 1.5;
+    font-weight: 400;
+    background-color: white;
+    color: rgb(0, 0, 43);
+}
+
+.no-bullets li a:link {
+    color: rgb(0, 0, 43);
+    text-decoration: none;
+}
+
+.no-bullets li a:visited {
+    color: rgb(0, 0, 43);
+}
+
+.no-bullets li a:hover {
+    color: rgb(0, 0, 194);
+    border-left: 5px outset transparent;
+    border-color: rgb(0, 0, 194);
+    padding: 5px;
+}
+
+.no-bullets li a:active {
+    color: rgb(0, 0, 43);
+    border-left: 5px outset transparent;
+    border-color: rgb(0, 0, 43);
+    padding: 5px;
+}
+
+
+.main-content {
+    position: absolute;
+    left: 300px;
+    top: 310px;
+}
+.inline-code {
+    background-color: lightgrey;
+    font-size: 15px;
+    padding: 0px 4px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.parent {
+    text-align: left;
+    font-size: 0px;
+}
+
+.blurb {
+    font-size: 18px;
+    width: 400px;
+    display: inline-block;
+    padding: 0px 20px 0px 0px;
+    vertical-align: top;
+}
+
+pre {
+    width: 400px;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0px;
+    background-color: #13081e;
+    text-align: left;
+    white-space: pre;
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    color: white;
+    line-height: 1.5;
+    overflow: scroll;
+    overflow-y: hidden
+}
+
+.element {
+    color: #c80f5f;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.green-element {
+    color: #009107;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.commented-code {
+    color: grey;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 800;
+    font-size: 14px;
+}
+
+.avatar {
+    background-image: url('../images/better_than_drake.png');
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    display: inline-block;
+    vertical-align: middle;
+}
